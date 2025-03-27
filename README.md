@@ -99,7 +99,7 @@ Here are the details of each environment variable:
 
 ## Mandatory Checklists (Publisher)
 
-- [ ] Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
+- [x]Clone https://gitlab.com/ichlaffterlalu/bambangshop to a new repository.
 
 -  **STAGE 1: Implement models and repositories**
 
@@ -119,17 +119,17 @@ Here are the details of each environment variable:
 
 -  **STAGE 2: Implement services and controllers**
 
-- [ ] Commit: `Create Notification service struct skeleton.`
+- [x] Commit: `Create Notification service struct skeleton.`
 
-- [ ] Commit: `Implement subscribe function in Notification service.`
+- [x] Commit: `Implement subscribe function in Notification service.`
 
-- [ ] Commit: `Implement subscribe function in Notification controller.`
+- [x] Commit: `Implement subscribe function in Notification controller.`
 
-- [ ] Commit: `Implement unsubscribe function in Notification service.`
+- [x] Commit: `Implement unsubscribe function in Notification service.`
 
-- [ ] Commit: `Implement unsubscribe function in Notification controller.`
+- [x] Commit: `Implement unsubscribe function in Notification controller.`
 
-- [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+- [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 
 -  **STAGE 3: Implement notification mechanism**
 
@@ -165,6 +165,11 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. The separation of "Service" and "Repository" from a monolithic Model in modern software architectures stems from adhering to design principles like the Single Responsibility Principle (SRP) and promoting loose coupling. By extracting data access logic into a dedicated Repository layer, we isolate data storage concerns, making the system more adaptable to changes in database technologies or data sources. The Service layer, on the other hand, encapsulates business logic, ensuring that the Model remains focused on data representation. This separation enhances testability, maintainability, and reusability, as each layer can be independently modified and tested, leading to a more robust and scalable application.
+
+2. If we rely solely on the Model without Service and Repository layers, the Model classes (Program, Subscriber, Notification) would become overly complex and tightly coupled. Each Model would need to handle both data storage and business logic, leading to code duplication and increased complexity. For instance, the Program Model would manage program data while also handling subscriber management and notification triggers, making it bloated and difficult to maintain. Similarly, the Subscriber Model would need to interact with both program data and notification services, creating intricate dependencies. This interconnectedness would make the code harder to understand, test, and modify, ultimately leading to a more fragile and error-prone system.
+
+3. Postman has proven to be an indispensable tool for testing our API endpoints. By allowing us to send various HTTP requests with custom headers and bodies, it facilitates thorough testing of our API's functionality. The ability to automate tests through collections and scripts has streamlined our testing process, ensuring consistency and efficiency. Features like environments, which enable us to manage different configurations, and monitors, which allow scheduled API health checks, are particularly useful for our group project. Furthermore, Postman's mock server capabilities could be invaluable for future projects, allowing us to test API interactions even before the backend is fully implemented, thereby accelerating development and improving collaboration.
 
 
 #### Reflection Publisher-3
